@@ -1,0 +1,218 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+html{
+  overflow-x: hidden;
+}
+.ger{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.24);
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.network{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:mediumaquamarine;
+  color: #fff;
+  font-size: 30px;
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black !important;
+    text-decoration: none !important;
+}
+.product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+.pay{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+.pay .a{
+  width: 30%;
+  height: 10%;
+  background-color: #28a1c0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px !important;
+  color:#fff !important;
+  margin-top: 20px;
+}
+@media(max-width:600px){
+  .pay .a{
+    width: 70%;
+  }
+
+}
+.c{
+  margin-top: 100px !important;
+  }
+.img-cat{
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  
+}
+.inner{
+
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 40px 0px;
+  padding-right: 10px;
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  border: 2px solid rgba(0, 0, 0, 0.288);
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+.inner:hover{
+  box-shadow: 1px 1px 10px #4fa74f;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+.x{
+  margin-top: 6rem !important;
+}
+.x img{
+  width: calc(100% + 20%) !important;
+  height: 49% !important;
+    
+}
+
+
+@media(max-width:770px){
+  .x img{
+    width: 50% !important;
+    height: 80% !important;
+      
+  }
+}
+.screenbrand{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.205);
+  display: flex;
+  justify-content: center;
+opacity: 0;
+visibility: hidden;
+
+}
+.opacity{
+opacity: 1;
+visibility: visible;
+}
+.smallscreen{
+  margin-top: 50px;
+  width: 55%;
+  height: 40%;
+  background-color: #fff;
+  border-radius: 6px;
+
+transform: translateY(-150%);
+transition: all 0.5s;
+}
+.y{
+  transform:  translateY(60%);
+  transition: all 0.5s;
+
+}
+
+.non{
+  display: none;
+}
+.smallscreen .close  ,.smallscreen .btnclose{
+  display: flex;
+  justify-content: flex-end;
+}
+.smallscreen .close i{
+  font-size: 35px;
+}
+.btnclose{
+  color: #7f7f7f;
+}
+.contscreen1{
+  display: flex;
+  justify-content: center;
+align-items: center;
+
+  
+}
+@media(min-width:768px){
+  .imgcat{
+    width: 50% !important;
+    height:50% !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
