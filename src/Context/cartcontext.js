@@ -62,6 +62,18 @@ function updatetocart(id,count){
 
 
 }
+function Deleteallcarts(){
+  
+  return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart`,
+  {
+    headers
+  }
+  
+  
+  ).then(res=>res).catch(error=>error)
+
+
+}
 function payadress(cartid,url,values){
   
   return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartid}?url=${url}`,{
@@ -93,7 +105,7 @@ useEffect(() => {
 v()
 }, []);
 
-return <CartContext.Provider value={{addtocart ,getddtocart ,updatetocart,coun,cd,deletetocart,payadress}}>
+return <CartContext.Provider value={{ Deleteallcarts,addtocart ,getddtocart ,updatetocart,coun,cd,deletetocart,payadress}}>
 {props.children}
 </CartContext.Provider>
 

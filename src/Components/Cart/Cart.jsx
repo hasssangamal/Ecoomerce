@@ -10,20 +10,26 @@ export default function Cart() {
 let [infor, setinfor] = useState();
 
 
-  let {getddtocart,updatetocart,deletetocart}=useContext(CartContext)
+  let {getddtocart,updatetocart,deletetocart,Deleteallcarts}=useContext(CartContext)
 
  async function deletev(id){
   let {data}=await deletetocart(id)
   setinfor(data);
   console.log(data);
 }
-useEffect(() => {
+
+ async function deleteall(){
+  let {data}=await Deleteallcarts()
   
-  deletev()
+  console.log(data);
+}
+// useEffect(() => {
+  
+//   deletev()
 
 
 
-}, []);
+// }, []);
  async function updatecount(id,count){
   let {data}=await updatetocart(id,count)
   setinfor(data);
@@ -48,9 +54,9 @@ getcertdta()
 
 
   return <>
+  <h2 className='text-center'>Shop cart:</h2>
 {infor?<div className="container bg-body-tertiary mt-5">
 <div className="pay"><Link to={'/Adress'} className='a'> online payment</Link></div>
-  <h2>Shop cart:</h2>
   <h4 className='text-main'>total cart price: {infor.data.totalCartPrice} EGP</h4>
 {infor.data.products.map(it=>(
 
@@ -93,7 +99,7 @@ getcertdta()
 
 ))}
 
-
+<button onClick={deleteall} type="button" class="btn btn-outline-warning text-center d-flex mx-auto mt-3 mb-3"><Link to="/">Clear all products</Link></button>
 </div>:""}
   </>
 }

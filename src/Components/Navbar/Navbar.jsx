@@ -90,13 +90,13 @@ export default function Navbar() {
                 <i className="fab mx-2 fa-instagram"></i>
                 <i className="fab mx-2 fa-youtube"></i>
                 <i className="fab mx-2 fa-tiktok"></i> */}
-                      <div className="d-flex justify-content-start">
+                      <div className="d-flex justify-content-start ">
               <Link className="nav-link" to="/cart">
                   <i
                     className="fa-solid fa-cart-shopping"
                     style={{ color: "#0aad0a" }}
                   ></i>
-                  <sup className="fs-6">{infor.data?.products.length}</sup>
+                  <sup className=" mb-3 fs-8 bg-success p-1 text-white">{infor.data?.products.length}</sup>
                 </Link>
               </div>
               </li>}
