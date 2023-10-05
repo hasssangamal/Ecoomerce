@@ -8,7 +8,8 @@ import { useQuery } from 'react-query';
 import { Oval } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/cartcontext';
-
+import {Helmet} from "react-helmet";
+import im from '../Assets/images/download.png'
 
 const Featureproduct = () => {
 
@@ -69,7 +70,12 @@ const fitered = (event) => {
 
   return (
     <>
-    
+     <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+              <link rel="shortcut icon" href={im}  />
+            </Helmet>
 {isLoading ?    <div className='d-flex justify-content-center align-items-center'>
 <div className="ger">
 <Oval

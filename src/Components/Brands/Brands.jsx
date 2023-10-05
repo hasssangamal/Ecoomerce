@@ -6,7 +6,8 @@ import { getallbrands } from '../../redux/brandsReducer';
 import { getspecifcbrand } from '../../redux/brandsReducer';
 import { Oval } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
-
+import {Helmet} from "react-helmet";
+import im from '../../Assets/images/download.png'
 export default function Brands() {
   const [transalt, setstate] = useState('');
   const [opacity, setopacity] = useState('');
@@ -22,6 +23,12 @@ dispatch(getallbrands ())
 
 
   return <>
+     <Helmet>
+                <meta charSet="utf-8" />
+                <title>Brands</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <link rel="shortcut icon" href={im}  />
+            </Helmet>
   {loading?<div className="ger">
 <Oval
   height={80}

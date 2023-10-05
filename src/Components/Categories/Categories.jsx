@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Oval } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet";
+import im from '../../Assets/images/download.png'
 export default function Categories() {
 let dispatch =useDispatch()
 let {loading,categories,Error,textcat}=useSelector((state) => {
@@ -17,6 +19,12 @@ dispatch(getallcat())
 console.log(categories);
 console.log(textcat);
   return <>
+     <Helmet>
+                <meta charSet="utf-8" />
+                <title>Categories</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <link rel="shortcut icon" href={im}  />
+            </Helmet>
 {loading?<div className="ger">
 <Oval
   height={80}

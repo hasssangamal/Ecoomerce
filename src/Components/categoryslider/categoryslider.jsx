@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Slider from "react-slick";
 // import styles from './Categoryslider.module.css';
 import axios from 'axios';
-
+import {Helmet} from "react-helmet";
 export default function Categoryslider() {
 
 function getdata(){
@@ -34,7 +34,12 @@ var settings = {
   ]
 };
   return <>
-
+   <Helmet>
+                <meta charSet="utf-8" />
+                <title>specific product</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+              
+            </Helmet>
 <div className='container mb-5'>
     <Slider {...settings}>
       {data?.data.data.map((cat)=>(

@@ -4,7 +4,8 @@ import styles from './Cart.module.css';
 import { date } from 'yup';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import {Helmet} from "react-helmet";
+import im from '../../Assets/images/download.png'
 export default function Cart() {
 
 let [infor, setinfor] = useState();
@@ -54,6 +55,12 @@ getcertdta()
 
 
   return <>
+     <Helmet>
+                <meta charSet="utf-8" />
+                <title>Cart</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+              <link rel="shortcut icon" href={im}  />
+            </Helmet>
   <h2 className='text-center'>Shop cart:</h2>
 {infor?<div className="container bg-body-tertiary mt-5">
 <div className="pay"><Link to={'/Adress'} className='a'> online payment</Link></div>

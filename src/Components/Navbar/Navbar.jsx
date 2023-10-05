@@ -96,7 +96,7 @@ export default function Navbar() {
                     className="fa-solid fa-cart-shopping"
                     style={{ color: "#0aad0a" }}
                   ></i>
-                  <sup className=" mb-3 fs-8 bg-success p-1 text-white">{infor.data?.products.length}</sup>
+                  <sup className=" bg-main  mb-3 fs-8  p-1 text-white">{infor.data?.products.length}</sup>
                 </Link>
               </div>
               </li>}
