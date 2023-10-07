@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styles from './Proddaetails.module.css';
+
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useQuery } from 'react-query';

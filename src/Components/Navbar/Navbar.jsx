@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
+
 import { Link, json } from "react-router-dom";
 import logo from "../../Assets/images/freshcart-logo.svg";
 import { UserContext } from "../../Context/Usercontext";
@@ -11,7 +11,8 @@ export default function Navbar() {
   const [shop, setshop] = useState([]);
   const [infor, setinfor] = useState([]);
   let { usercontext, setusercontext } = useContext(UserContext);
-  let { getddtocart } = useContext(CartContext);
+  let { getddtocart ,xd } = useContext(CartContext);
+  console.log(xd.numOfCartItems);
   async function getcertdta() {
     let { data } = await getddtocart();
     setinfor(data?data:"");
@@ -96,7 +97,7 @@ export default function Navbar() {
                     className="fa-solid fa-cart-shopping"
                     style={{ color: "#0aad0a" }}
                   ></i>
-                  <sup className=" bg-main  mb-3 fs-8  p-1 text-white">{infor.data?.products.length}</sup>
+                  <sup  className=" sup border rounded-circle sup bg-main  mb-3 fs-8  p-1 text-white">{xd.numOfCartItems}</sup>
                 </Link>
               </div>
               </li>}

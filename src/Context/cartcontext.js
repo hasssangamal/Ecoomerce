@@ -16,7 +16,12 @@ function getddtocart(){
   }
   
   
-  ).then(res=>res).catch(error=>error)
+  ).then(res=>{
+  
+    console.log(res.data);
+    setxd(res?.data)
+return res
+  }).catch(error=>error)
 
 
 }
@@ -30,7 +35,12 @@ function addtocart(id){
   }
   
   
-  ).then(res=>res).catch(error=>error)
+  ).then(res=>{
+    console.log(res.data);
+    setxd(res?.data)
+return res
+  }
+  ).catch(error=>error)
 
 
 }
@@ -44,7 +54,12 @@ function deletetocart(id){
   }
   
   
-  ).then(res=>res).catch(error=>error)
+  ).then(res=>
+    {
+      console.log(res.data);
+      setxd(res?.data)
+      return res
+    }).catch(error=>error)
 
 
 }
@@ -58,7 +73,11 @@ function updatetocart(id,count){
   }
   
   
-  ).then(res=>res).catch(error=>error)
+  ).then(res=>{
+    console.log(res.data);
+    setxd(res?.data)
+    return res
+  }).catch(error=>error)
 
 
 }
@@ -70,7 +89,11 @@ function Deleteallcarts(){
   }
   
   
-  ).then(res=>res).catch(error=>error)
+  ).then(res=>{
+    console.log(res.data);
+    setxd(res?.data)
+    return res
+  }).catch(error=>error)
 
 
 }
@@ -105,7 +128,7 @@ useEffect(() => {
 v()
 }, []);
 
-return <CartContext.Provider value={{ Deleteallcarts,addtocart ,getddtocart ,updatetocart,coun,cd,deletetocart,payadress}}>
+return <CartContext.Provider value={{xd, Deleteallcarts,addtocart ,getddtocart ,updatetocart,coun,cd,deletetocart,payadress}}>
 {props.children}
 </CartContext.Provider>
 

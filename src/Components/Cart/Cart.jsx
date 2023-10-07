@@ -1,17 +1,21 @@
 import React, { useContext, useEffect } from 'react';
 import { CartContext } from '../../Context/cartcontext';
-import styles from './Cart.module.css';
+
 import { date } from 'yup';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import im from '../../Assets/images/download.png'
+
+
 export default function Cart() {
+
 
 let [infor, setinfor] = useState();
 
 
-  let {getddtocart,updatetocart,deletetocart,Deleteallcarts}=useContext(CartContext)
+
+  let {xd,getddtocart,updatetocart,deletetocart,Deleteallcarts}=useContext(CartContext)
 
  async function deletev(id){
   let {data}=await deletetocart(id)
@@ -33,7 +37,7 @@ let [infor, setinfor] = useState();
 // }, []);
  async function updatecount(id,count){
   let {data}=await updatetocart(id,count)
-  setinfor(data);
+  // setinfor(data);
 
 
 
@@ -43,6 +47,7 @@ localStorage.setItem("as",infor?.data.products.length);
 async function getcertdta(){
   let {data}=await getddtocart()
   setinfor(data);
+  
   console.log(data);
 }
 useEffect(() => {
@@ -52,8 +57,9 @@ getcertdta()
 
 
 }, []);
-
-
+console.log(xd);
+localStorage.setItem('x',infor?.data?.products.length)
+console.log();
   return <>
      <Helmet>
                 <meta charSet="utf-8" />

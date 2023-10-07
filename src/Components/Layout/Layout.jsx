@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Layout.module.css';
+
 import { Outlet } from 'react-router-dom';
-import { Offline, Online } from "react-detect-offline";
+import { Offline} from "react-detect-offline";
 import Navbar from '../Navbar/Navbar'
-import { useState } from 'react';
+
 
 export default function Layout() {  return <>
   <Navbar/>

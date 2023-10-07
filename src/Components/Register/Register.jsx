@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Register.module.css';
+
 import {  useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';

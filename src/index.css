@@ -216,6 +216,10 @@ align-items: center;
     margin-right: 10px !important;
   }
 }
-/* .sup {
-  top: -1.5em !important;
-} */
+
+
+sup {
+  top: -1em !important;
+
+}
+

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Brands.module.css';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getallbrands } from '../../redux/brandsReducer';
