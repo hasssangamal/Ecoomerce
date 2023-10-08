@@ -66,11 +66,7 @@ export default function Navbar() {
                       Categories
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/Wishlist">
-                    Wishlist
-                    </Link>
-                  </li>
+                
                   <li className="nav-item">
                     <Link className="nav-link" to="/brands">
                       Brands<sub>{shop}</sub>
