@@ -74,8 +74,8 @@ function updatetocart(id,count){
   
   
   ).then(res=>{
-    console.log(res.data);
-    setxd(res?.data)
+    // console.log(res.data);
+    // setxd(res?.data)
     return res
   }).catch(error=>error)
 

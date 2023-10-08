@@ -37,7 +37,7 @@ let [infor, setinfor] = useState();
 // }, []);
  async function updatecount(id,count){
   let {data}=await updatetocart(id,count)
-  // setinfor(data);
+  setinfor(data);
 
 
 
@@ -90,16 +90,18 @@ console.log();
   
     <button className='btn btn-bdr' onClick={() => {
 
-      if (it.count===1) {
+      if (it.count >= 1   ) {
         updatecount(it.product._id,it.count+1)
+        console.log("skns");
       }
     }}><i className='fas fa-plus text-main'></i></button>
     <span>{it.count}</span>
   
     
     <button className='btn btn-bdr'onClick={() => {
-  if(it.count ==2){
+  if(it.count >= 2){
     updatecount(it.product._id,it.count-1)
+    console.log("skns");
 
   }
       

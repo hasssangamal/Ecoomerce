@@ -8,13 +8,12 @@ import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import Categories from './Components/Categories/Categories'
 import Layout from './Components/Layout/Layout'
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import { useContext } from 'react';
 import { UserContext } from './Context/Usercontext';
 import Protectedrou from './protectedrou/protectedrou';
 import Proddaetails from './Components/Proddaetails/Proddaetails';
 import CartContextProvider from './Context/cartcontext';
-// import Profile from './Components/Profile/Profile';
 import Adress from './Components/Adress/Adress'
 import Allorders from './Components/Allorders/Allorders'
 import { store } from './redux/store';
@@ -32,6 +31,7 @@ let routes = createHashRouter([
     // {path:'Profile' , element:<Protectedrou><Profile/></Protectedrou>},
     {path:'allorders' , element:<Protectedrou><Allorders/></Protectedrou>},
     {path:'Adress' , element:<Protectedrou><Adress /></Protectedrou>},
+  
 
 
   
@@ -53,9 +53,11 @@ if(localStorage.getItem('usetocken') !== null){
 
 
   return <Provider store={store}>
+  
      <CartContextProvider>
  <RouterProvider router={routes}></RouterProvider>
   </CartContextProvider>
+
   </Provider>
 }
 
